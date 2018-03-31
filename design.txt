@@ -1,0 +1,15 @@
+Title: "This is a todo list App for practice"
+Three links for status: All / Completed / Incompleted
+
+
+
+
+This is a todo list App for practice
+
+    All | Completed | Incompleted
+
+1   Todo 1
+2   Todo 2
+3   Todo 3
+
+_______ Add todo
