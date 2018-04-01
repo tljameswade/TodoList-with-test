@@ -1,11 +1,9 @@
 import ACTIONS from '../actions/index';
 
-export const filter = (state = {filter: 'All'}, action) => {
+export const filter = (state = 'All', action) => {
     switch(action.type) {
-        case ACTIONS.FILTER_TODO:
-            return {
-                filter: action.filter
-            }
+        case ACTIONS.SET_FILTER:
+            return action.filter
         default:
             return state;
     }

@@ -17,9 +17,9 @@ export const toggle_todo = (id) => {
     }
 }
 
-export const filter_todo = (filter) => {
+export const set_filter = (filter) => {
     return {
-        type: ACTIONS.FILTER_TODO,
+        type: ACTIONS.SET_FILTER,
         filter
     }
 }

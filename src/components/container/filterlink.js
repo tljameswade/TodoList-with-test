@@ -1,10 +1,10 @@
 import Link from '../presentational/link';
-import { filter_todo } from '../../actions/actions';
+import { set_filter } from '../../actions/actions';
 import { connect } from 'react-redux';
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        handleClick: () => dispatch(filter_todo(ownProps.text))
+        handleClick: () => dispatch(set_filter(ownProps.text))
     }
 }
 

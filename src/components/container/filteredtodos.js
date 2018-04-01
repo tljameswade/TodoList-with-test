@@ -1,17 +1,6 @@
-import React from 'react';
-import ToDoItem from '../presentational/todoitem';
 import { connect } from 'react-redux';
 import { toggle_todo } from '../../actions/actions';
-
-export const FilteredTodos = ({filter, todos, toggleTodo}) => {
-    return (
-        <div>
-            {getVisibleTodos(todos, filter).map(todo =>
-                <ToDoItem key={todo.id} text={todo.text} completed={todo.completed} handleClick={() => toggleTodo(todo.id)} />
-            )}
-        </div>
-    );
-}
+import ToDoList from '../presentational/todolist';
 
 const getVisibleTodos = (todos, filter) => {
     switch(filter) {
@@ -32,9 +21,8 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
     return {
-        todos: state.todos,
-        filter: state.filter.filter
+        todos: getVisibleTodos(state.todos, state.filter)
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(FilteredTodos);
+export default connect(mapStateToProps, mapDispatchToProps)(ToDoList);

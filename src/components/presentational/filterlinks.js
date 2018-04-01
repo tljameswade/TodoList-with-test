@@ -1,7 +1,7 @@
+import FilterLink from '../container/filterlink';
 import React from 'react';
-import FilterLink from './filterlink';
 
-export const FilterLinks = () => {
+const FilterLinks = () => {
     return (
     <div style={{fontSize: '1.5em'}}>
         <FilterLink text={'All'} />
@@ -16,3 +16,5 @@ export const FilterLinks = () => {
     </div>
     );
 }
+
+export default FilterLinks;
