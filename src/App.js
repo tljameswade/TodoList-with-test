@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { FilterLinks } from './components/container/filterlinks';
-import { FilteredTodos } from './components/container/filteredtodos';
-import { AddTodo } from './components/container/addtodo';
+import FilteredTodos from './components/container/filteredtodos';
+import AddTodo from './components/container/addtodo';
 
 class App extends Component {
   render() {
