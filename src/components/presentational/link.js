@@ -3,7 +3,7 @@ import './link.css';
 
 export const Link = ({text, handleClick}) => {
     return (
-        <span className='link' onClick={handleClick}>
+        <span className='link' onClick={() => handleClick(text)}>
             {text}
         </span>
     );

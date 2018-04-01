@@ -1,6 +1,5 @@
 import ACTIONS from './index';
-
-const uuidv1 = require('uuid/v1');
+import uuidv1 from 'uuid/v1';
 
 export const add_todo = (text) => {
     return {

@@ -2,9 +2,9 @@ import Link from '../presentational/link';
 import { set_filter } from '../../actions/actions';
 import { connect } from 'react-redux';
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        handleClick: () => dispatch(set_filter(ownProps.text))
+        handleClick: (text) => dispatch(set_filter(text))
     }
 }
 
