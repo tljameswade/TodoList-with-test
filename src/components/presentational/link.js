@@ -1,8 +1,9 @@
 import React from 'react';
+import './link.css';
 
-const Link = ({text}) => {
+export const Link = ({text, handleClick}) => {
     return (
-        <span style={{fontWeight: 'bold'}}>
+        <span className='link' onClick={handleClick}>
             {text}
         </span>
     );

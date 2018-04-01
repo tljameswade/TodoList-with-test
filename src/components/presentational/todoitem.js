@@ -1,8 +1,9 @@
 import React from 'react';
+import './todoitem.css';
 
-const todo = ({id, text, completed}) => {
+const todo = ({text, completed, handleClick}) => {
     return (
-        <li className='todoItem' style={{
+        <li className='todoItem' onClick={handleClick} style={{
             textDecoration: completed ? 'line-through' : 'none'
         }}>{text}</li>
     );

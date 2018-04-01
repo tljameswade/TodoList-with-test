@@ -1,18 +1,18 @@
 import React from 'react';
-import Link from '../presentational/link';
+import FilterLink from './filterlink';
 
 export const FilterLinks = () => {
     return (
     <div style={{fontSize: '1.5em'}}>
-        <Link text={'All'} />
+        <FilterLink text={'All'} />
         {' '}
         {'|'}
         {' '}
-        <Link text={'Completed'} />
+        <FilterLink text={'Completed'} />
         {' '}
         {'|'}
         {' '}
-        <Link text={'InComplete'} />
+        <FilterLink text={'InComplete'} />
     </div>
     );
 }
