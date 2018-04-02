@@ -8,7 +8,7 @@ const AddTodo = ({addtodo}) => {
         <input type='text' placeholder='A new task' ref={node => inputText = node}/>
         {' '}
         <button onClick={() => {
-            if (inputText.value === '') {
+            if (inputText && inputText.value === '') {
                 return;
             }
             addtodo(inputText.value);
