@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { toggle_todo } from '../../actions/actions';
 import ToDoList from '../presentational/todolist';
 
-const getVisibleTodos = (todos, filter) => {
+export const getVisibleTodos = (todos, filter) => {
     switch(filter) {
         case 'Completed':
             return todos.filter(todo => todo.completed);
