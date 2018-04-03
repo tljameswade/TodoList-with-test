@@ -7,7 +7,7 @@ it('Todo list renders without crashing', () => {
   expect(wrapper).toHaveLength(1);
 });
 
-it('Todo list renders correct amount of to do items', () => {
+it('Todo list renders correct to do items', () => {
     const todos = [
         {
             id: 1,
@@ -21,4 +21,8 @@ it('Todo list renders correct amount of to do items', () => {
     ]
     const wrapper = shallow(<TodoList todos={todos} toggleTodo={_ => _} />);
     expect(wrapper.find('todo')).toHaveLength(2);
+    expect(wrapper.childAt(0).prop('text')).toEqual('task1');
+    expect(wrapper.childAt(0).prop('completed')).toEqual(false);
+    expect(wrapper.childAt(1).prop('text')).toEqual('task2');
+    expect(wrapper.childAt(1).prop('completed')).toEqual(true);
 });

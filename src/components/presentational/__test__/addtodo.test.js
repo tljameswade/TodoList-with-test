@@ -14,6 +14,7 @@ it('Click the button triggers addtodo method to be called when the input value i
     const addToDo = TestUtils.renderIntoDocument(<div>
         <AddToDo addtodo={addtodo} />
     </div>).children[0];
+    
     const input = addToDo.children[0];
     const button =addToDo.children[1];
     expect(input.type).toEqual('text');
